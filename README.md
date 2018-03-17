@@ -1,7 +1,7 @@
 # Cheatsheet for using R and the Python library Pandas
 
 
-Many people know how to use Pandas but not R or the other way around. And the Internet is lacking in resources that provide a side-by-side comparison of the two scripting languages. This cheatsheet will address this issue and be of help if you know one but not the other (or neither) of these languages. You will see how things work and we will focus on data wrangling.
+Many people know how to use Pandas but not R or the other way around. And the Internet is lacking in resources that provide a side-by-side comparison of the two scripting languages. This cheatsheet will address this issue and be of help if you know one but not the other (or neither) of these languages. You will see how these things work and we will focus on data wrangling.
 
 
 ### Preliminary: load the data. We will use the famous and simple Iris datset.
@@ -29,3 +29,40 @@ df = pd.DataFrame(data.data, columns=data.feature_names)
 ```
 
 The imports are done at the top. Then the data is loaded. Finally the appropriate data is transformed into a pandas dataframe. Notice we had to specify the data as well as the column names.
+
+
+### Get information about the dataset.
+
+
+#### R
+
+```
+dim(iris)
+
+nrow(iris)
+ncol(iris)
+
+summary(iris) #shows min, max quartiles, mean of columns
+
+head(iris)
+
+tail(iris)
+
+```
+
+Getting the dimensions of the dataset, viewing summary statistics on the columns, and viewing the first and last rows of the dataset.
+
+#### Pandas
+
+```
+df.shape
+
+df.describe() #shows min, max, quartiles, mean, standard deviation, and counts of columns
+
+df.head()
+
+df.tail()
+
+```
+
+Getting the dimensions of the dataset, viewing summary statistics on the columns, and viewing the first and last rows of the dataset.
