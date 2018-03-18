@@ -78,7 +78,7 @@ df.columns
 4. Returning the column names of the dataset
 
 
-### Select elements and use for loops to data transformations.
+### Select elements and use for loops to do a data transformation.
 
 
 #### R
