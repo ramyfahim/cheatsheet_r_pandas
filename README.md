@@ -48,9 +48,14 @@ head(iris)
 
 tail(iris)
 
+colnames(iris)
+
 ```
 
-Getting the dimensions of the dataset, viewing summary statistics on the columns, and viewing the first and last rows of the dataset.
+1. Getting the dimensions of the dataset
+2. Viewing summary statistics on the columns
+3. Viewing the first and last rows of the dataset
+4. Returning the column names of the dataset
 
 #### Pandas
 
@@ -63,6 +68,58 @@ df.head()
 
 df.tail()
 
+df.columns
+
 ```
 
-Getting the dimensions of the dataset, viewing summary statistics on the columns, and viewing the first and last rows of the dataset.
+1. Getting the dimensions of the dataset
+2. Viewing summary statistics on the columns. The pandas summary function gives some more information here.
+3. Viewing the first and last rows of the dataset
+4. Returning the column names of the dataset
+
+
+### Select elements and use for loops to data transformations.
+
+
+#### R
+
+```
+iris[1, 1]
+
+iris$Sepal.Length[1]
+
+iris$Sepal.Length
+
+for (i in 1:nrow(iris)){
+  iris$Sepal.Length[i] <- iris$Sepal.Length[i] + 100
+}
+
+```
+
+Get the element in the first row and first column by index. In R indices start at 1, not 0.
+Then get the same element by specifying the column name and the index.
+Then return the entire column.
+
+Run a for loop to go through each row of the dataset, and in the sepal length column, add 100 to every element.
+
+#### Pandas
+
+```
+df.iloc[0, 0]
+
+df.loc[0, 'sepal length (cm)']
+df['sepal length (cm)'][0]
+
+df.loc[:, 'sepal length (cm)']
+df['sepal length (cm)']
+
+for i in range(0, df.shape[0]):
+    df['sepal length (cm)'][i] += 100
+
+```
+
+Get the element in the first row and first column by index. In Pandas, as in regular Python, indexing starts at 0.
+Then get the same element by specifying the column name and the index.
+Then return the entire column.
+
+Run a for loop to go through each row of the dataset, and in the sepal length column, add 100 to every element.
