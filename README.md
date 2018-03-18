@@ -108,10 +108,10 @@ Run a for loop to go through each row of the dataset, and in the sepal length co
 df.iloc[0, 0]
 
 df.loc[0, 'sepal length (cm)']
-df['sepal length (cm)'][0]
+df['sepal length (cm)'][0] #option 2
 
 df.loc[:, 'sepal length (cm)']
-df['sepal length (cm)']
+df['sepal length (cm)'] #option 2
 
 for i in range(0, df.shape[0]):
     df['sepal length (cm)'][i] += 100
@@ -134,10 +134,10 @@ Run a for loop to go through each row of the dataset, and in the sepal length co
 library(dplyr)
 
 filter(iris, Sepal.Length == 105)
-iris[iris$Sepal.Length == 105,]
+iris[iris$Sepal.Length == 105,] #option 2
 
 select(iris, Sepal.Length, Petal.Length)
-iris[, c('Sepal.Length', 'Petal.Length')]
+iris[, c('Sepal.Length', 'Petal.Length')] #option 2
 
 iris <- mutate(iris, newcol = Sepal.Length + Sepal.Width)
 
@@ -166,7 +166,7 @@ Rename newcol to new_name.
 df.loc[df['sepal length (cm)'] == 105]
 
 df[['sepal length (cm)', 'petal length (cm)']]
-df.loc[:, ['sepal length (cm)', 'petal length (cm)']]
+df.loc[:, ['sepal length (cm)', 'petal length (cm)']] #option 2
 
 df['newcol'] = df['sepal length (cm)'] + df['sepal width (cm)']
 
